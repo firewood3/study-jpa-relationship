@@ -1,4 +1,4 @@
-package com.gchsj.jparelationship.entity;
+package com.gchsj.jparelationship.manytomany.entity;
 
 import lombok.*;
 

@@ -1,4 +1,4 @@
-package com.gchsj.jparelationship.manytomany.entity;
+package com.gchsj.jparelationship.onetomany.entity;
 
 import lombok.*;
 
@@ -11,18 +11,13 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class CourseRegistration {
+public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String name;
 
     @ManyToOne
-    @JoinColumn(name = "student_id")
-    Student student;
-
-    @ManyToOne
-    @JoinColumn(name = "course_id")
-    Course course;
-
-    int grade;
+    @JoinColumn(name = "basket_id", insertable = false, updatable = false)
+    private Basket basket;
 }

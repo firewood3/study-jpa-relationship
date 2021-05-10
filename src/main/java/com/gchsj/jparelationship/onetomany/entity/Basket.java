@@ -1,4 +1,4 @@
-package com.gchsj.jparelationship.manytomany.entity;
+package com.gchsj.jparelationship.onetomany.entity;
 
 import lombok.*;
 
@@ -13,12 +13,13 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Course {
+public class Basket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
-    @OneToMany(mappedBy = "course", fetch = FetchType.EAGER)
-    private List<CourseRegistration> registrations = new ArrayList<>();
+    @OneToMany
+    @JoinColumn(name = "basket_id")
+    private List<Item> items = new ArrayList<>();
 }

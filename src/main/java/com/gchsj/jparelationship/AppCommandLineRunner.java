@@ -1,11 +1,11 @@
 package com.gchsj.jparelationship;
 
-import com.gchsj.jparelationship.entity.Course;
-import com.gchsj.jparelationship.entity.CourseRegistration;
-import com.gchsj.jparelationship.entity.Student;
-import com.gchsj.jparelationship.repository.CourseRegistrationRepository;
-import com.gchsj.jparelationship.repository.CourseRepository;
-import com.gchsj.jparelationship.repository.StudentRepository;
+import com.gchsj.jparelationship.manytomany.entity.Course;
+import com.gchsj.jparelationship.manytomany.entity.CourseRegistration;
+import com.gchsj.jparelationship.manytomany.entity.Student;
+import com.gchsj.jparelationship.manytomany.repository.CourseRegistrationRepository;
+import com.gchsj.jparelationship.manytomany.repository.CourseRepository;
+import com.gchsj.jparelationship.manytomany.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
